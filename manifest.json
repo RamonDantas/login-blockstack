@@ -1,0 +1,10 @@
+{
+    "name": "Teste Login",
+    "start_url": "http://localhost:3000",
+    "description": "Login teste Blockstack",
+    "icons": [{
+      "src": "./logo.svg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    }]
+  }
