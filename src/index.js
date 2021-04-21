@@ -3,10 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Connect } from '@blockstack/connect';
+
+const authOptions = {
+  manifestPath: window.location.origin+'/manifest.json',
+  finished: () => {
+    alert('Authentication success!');
+  },
+  appDetails: {
+    name: 'Tete Login',
+    icon: './logo.svg',
+  },
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Connect authOptions={authOptions} >
+      <App />
+    </Connect>    
   </React.StrictMode>,
   document.getElementById('root')
 );
